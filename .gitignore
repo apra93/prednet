@@ -1,14 +1,25 @@
+# Resulting download dirs
+prednet/kitti_data/
+prednet/kitti_results/
+prednet/model_data_keras2/
+
+# Ignore the cache dir
+cache/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
+*.pyc
+*.py~
 *$py.class
+
+# Backup Files
+*~
+*#
+.#*
+#*
 
 # C extensions
 *.so
-
-# Video and data folders
-kitti_data/
-model_data_keras*/
 
 # Distribution / packaging
 .Python
@@ -24,6 +35,7 @@ lib64/
 parts/
 sdist/
 var/
+wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -70,7 +82,7 @@ docs/_build/
 # PyBuilder
 target/
 
-# IPython Notebook
+# Jupyter Notebook
 .ipynb_checkpoints
 
 # pyenv
@@ -83,6 +95,7 @@ celerybeat-schedule
 .env
 
 # virtualenv
+.venv/
 venv/
 ENV/
 
@@ -91,3 +104,23 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# vim swap files
+*.swp
+
+# None of the logs 
+logs/*
+
+# None of the data
+data/*.*
+data/external/* 
+
+# None of the unsorted figures
+figures/unsorted/*
+figures/*.*
+
+# None of the specific model information
+models/*
+
+# But keep all the .gitkeep files
+!*.gitkeep

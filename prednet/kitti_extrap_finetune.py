@@ -11,9 +11,9 @@ from keras.models import Model, model_from_json
 from keras.layers import Input
 from keras.callbacks import LearningRateScheduler, ModelCheckpoint
 
-from prednet import PredNet
-from data_utils import SequenceGenerator
-from kitti_settings import *
+from prednet.prednet_base import PredNet
+from prednet.data_utils import SequenceGenerator
+from prednet.kitti_settings import *
 
 # Define loss as MAE of frame predictions after t=0
 # It doesn't make sense to compute loss on error representation, since the error isn't wrt ground truth when extrapolating.
